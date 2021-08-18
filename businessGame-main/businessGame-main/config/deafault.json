@@ -1,0 +1,304 @@
+{
+  "employees": {
+    "production_assistant": {
+      "cost_with_charges": 3200,
+      "min": 1,
+      "max": 99999,
+      "function": "aumento de capacidade"
+    },
+    "office_assistant": {
+      "cost_with_charges": 4500,
+      "min": 1,
+      "max": "proporcional ao auxiliar de produção",
+      "function": "Sem impacto direto. Representa 5% dos Aux de Prod"
+    },
+    "production_manager": {
+      "cost_with_charges": 24000,
+      "min": 1,
+      "max": 1,
+      "function": "Aumenta a produtividade do quadro em 10%"
+    },
+    "quality_control": {
+      "cost_with_charges": 4500,
+      "min": 0,
+      "max": 4,
+      "function": "Reduz as perdas por qualidade ou aumenta a produtividade (a decidir)"
+    },
+    "commercial_manager": {
+      "cost_with_charges": 24000,
+      "min": 1,
+      "max": 1,
+      "function": "É preciso ter 1 para realizar as vendas"
+    },
+    "production_supervisor": {
+      "cost_with_charges": 6400,
+      "min": 1,
+      "max": 99999,
+      "function": "Obrigatório para ter lucro"
+    }
+  },
+  "training": {
+    "production_assistant": 1500,
+    "office_assistant": 1500,
+    "production_manager": 1500,
+    "quality_control": 1500,
+    "commercial_manager": 1500,
+    "production_supervisor": 1500
+  },
+  "providers": {
+    "provider_a": {
+      "minimum_quantity": 100,
+      "lot": 60,
+      "lead_time": 10,
+      "reliability": 0.9,
+      "price_kilogram": 24.5,
+      "tax": {
+        "in_cash": 0.0,
+        "30_days": 0.5,
+        "60_days": 0.1
+      }
+    },
+    "provider_b": {
+      "minimum_quantity": 200,
+      "lot": 100,
+      "lead_time": 5,
+      "reliability": 0.9,
+      "price_kilogram": 24.5,
+      "tax": {
+        "in_cash": 0.0,
+        "30_days": 0.5,
+        "60_days": 0.1
+      }
+    },
+    "equipment": {
+      "chicken_cut_line": {
+        "product": {
+          "breast_file": {
+            "employees_per_shift": 90,
+            "capacity_kg_per_shift": 45000,
+            "chicken_cut_price": 15120000,
+            "maintenance_cost_per_week": 12000
+          }
+        }
+      },
+      "whole_chicken_line": {
+        "product": {
+          "whole_chicken": {
+            "employees_per_shift": 30,
+            "capacity_kg_per_shift": 40000,
+            "whole_chicken_price": 1920000,
+            "maintenance_cost_per_week": 9000
+          }
+        }
+      },
+      "sausage_line": {
+        "product": {
+          "sausage": {
+            "employees_per_shift": 20,
+            "capacity_kg_per_shift": 5000,
+            "sausage_line_price": 240000,
+            "maintenance_cost_per_week": 6000
+          }
+        }
+      },
+      "import_office": {
+        "product": {
+          "frozen_french_fries": {
+            "employees_per_shift": 10,
+            "capacity_kg_per_shift": 1000000000,
+            "import_office_price": 50000,
+            "maintenance_cost_per_week": 3000
+          }
+        }
+      },
+      "storage_space": {
+        "product": {
+          "all": {
+            "employees_per_shift": 5,
+            "capacity_kg_per_shift": 450000,
+            "storage_space_price": 4370000,
+            "maintenance_cost_per_week": 11000
+          }
+        }
+      }
+    },
+    "raw_material": {
+      "live_chicken_light": {
+        "price": 4.2,
+        "storage_coef": 1,
+        "shelf_life": 1,
+        "deadline": 45,
+        "payment_condition": "a vista"
+      },
+      "live_chicken_heavy": {
+        "price": 4.05,
+        "storage_coef": 1,
+        "shelf_life": 1,
+        "deadline": 45,
+        "payment_condition": "a vista"
+      },
+      "swine_raw_material": {
+        "price": 11.9,
+        "storage_coef": 1,
+        "shelf_life": 90,
+        "deadline": 7,
+        "payment_condition": 28
+      },
+      "plastic_bags": {
+        "price": 350,
+        "storage_coef": 2,
+        "shelf_life": 365,
+        "deadline": 30,
+        "payment_condition": 35
+      },
+      "cardboard_box": {
+        "price": 1.85,
+        "storage_coef": 0.5,
+        "shelf_life": 30,
+        "deadline": 10,
+        "payment_condition": 21
+      },
+      "condiment": {
+        "price": 95.0,
+        "storage_coef": 1,
+        "shelf_life": 90,
+        "deadline": 10,
+        "payment_condition": 28
+      },
+      "french_fries": {
+        "price": 4.9,
+        "storage_coef": 1.2,
+        "shelf_life": 90,
+        "deadline": 45,
+        "payment_condition": 30
+      }
+    },
+
+    "product": {
+      "breast_file": {
+        "production_and_sales_week": 18000,
+        "variable_cost": 6.44,
+        "fixed_cost_of_line_sales_unit": 0.4,
+        "fixed_cost_adm_and_others": 0.43,
+        "freight_cost": 0.05,
+        "total_cost": 7.32,
+        "price": 8.5,
+        "margem": 1.18
+      },
+      "whole_chikken": {
+        "production_and_sales_week": 16000,
+        "variable_cost": 5.45,
+        "fixed_cost_of_line_sales_unit": 0.15,
+        "fixed_cost_adm_and_others": 0.43,
+        "freight_cost": 0.05,
+        "total_cost": 6.08,
+        "price": 6.5,
+        "margem": 0.42
+      },
+
+      "sausage": {
+        "production_and_sales_week": 20000,
+        "variable_cost": 12.57,
+        "fixed_cost_of_line_sales_unit": 0.8,
+        "fixed_cost_adm_and_others": 0.43,
+        "freight_cost": 0.05,
+        "total_cost": 13.86,
+        "price": 15.9,
+        "margem": 2.04
+      },
+
+      "frozen_french_fries": {
+        "production_and_sales_week": 48000,
+        "variable_cost": 4.9,
+        "fixed_cost_of_line_sales_unit": 0.17,
+        "fixed_cost_adm_and_others": 0.43,
+        "freight_cost": 0.05,
+        "total_cost": 5.55,
+        "price": 6.8,
+        "margem": 1.25
+      }
+    }
+  },
+  "fixed_cost": {
+    "breast_file": 288000,
+    "whole_chicken": 96000,
+    "sausage": 64000,
+    "frozen_french_fries": 32000,
+    "fixed_cost_and_others": 87375,
+    "storage": 16000,
+    "financing": 500833.33,
+    "total": 1084208.33
+  },
+  "freight_table": {
+    "cart": 0.06,
+    "truck": 0.1,
+    "threefour": 0.35
+  },
+
+  "habitantes": 300000,
+
+  "consumption_elasticity": {
+    "price_max": 9.5,
+    "price_1": 9.22,
+    "price_2": 8.94,
+    "price_3": 8.67,
+    "price_4": 8.39,
+    "price_5": 8.11,
+    "price_6": 7.83,
+    "price_7": 7.56,
+    "price_8": 7.28,
+    "price_min": 7.0,
+
+    "consumption_week": {
+      "max": 0.6,
+      "1": 0.7,
+      "2": 0.8,
+      "3": 0.9,
+      "4": 1,
+      "5": 1.1,
+      "6": 1.2,
+      "7": 1.3,
+      "8": 1.4,
+      "min": 1.5
+    }
+  },
+
+  "media_investment_elasticity": {
+    "investment_max": 60000,
+    "investment_1": 54444.44,
+    "investment_2": 48888.89,
+    "investment_3": 43333.33,
+    "investment_4": 37777.78,
+    "investent_5": 32222.22,
+    "investment_6": 26666.67,
+    "investment_7": 21111.11,
+    "investment_8": 15555.56,
+    "investment_min": 10000.0,
+
+    "impact": {
+      "impact_max": 0.95,
+      "impact_1": 0.86,
+      "impact_2": 0.76,
+      "impact_3": 0.67,
+      "impact_4": 0.57,
+      "impact_5": 0.48,
+      "impact_6": 0.38,
+      "impact_7": 0.29,
+      "impact_8": 0.19,
+      "impact_min": 0.01
+    }
+  },
+
+  "fidelity_in_the_rounds": {
+    "1x": 0.5,
+    "2x": 0.6,
+    "3x": 0.7,
+    "4x": 0.8,
+    "5x": 0.9,
+    "6x": 0.01,
+    "7x": 0.01,
+    "8x": 0.01,
+    "9x": 0.01,
+    "10x": 0.01
+  }
+}
